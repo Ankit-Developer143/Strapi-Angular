@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tour_event1s",
+  "info": {
+    "name": "Tour Event1"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "venue": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+#####   rfce 
+import React from 'react'
+
+function shop() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+export default shop
+
+
+
+##### rafc
+
+import React from 'react'
+
+export const shop = () => {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+
+##  rfc
+
+import React from 'react'
+
+export default function shop() {
+    return (
+        <div>
+            
+        </div>
+    )
+}

@@ -1,0 +1,34 @@
+
+<mat-card>
+    <mat-card-title class="title">Student Details</mat-card-title>
+    <mat-card-content>
+    <table>
+      <tr>
+        <th>Sr.No</th>
+        <th>First-Name</th>
+        <th>Last-Name</th>
+        <th>Phone-Number</th>
+        <th>Paid</th>
+        <th>Pending</th>
+        <th>Last-Update</th>
+        <th>Admission Details</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of studentDetails | paginate: { itemsPerPage: count, currentPage: p } index as i">
+        <td>{{i+1}}.</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.Paid}}</td>
+        <td>{{item.Unpaid}}</td>
+        <td>{{item.updatedAt | date}}</td>
+        <td>{{item.admissionDate}}</td>
+        <td (click) = deleteData(item._id)> <a><i class="material-icons md-48">delete</i></a></td>
+      </tr>
+    </table>
+    </mat-card-content>
+  </mat-card>
+  <div class="text-right">
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+    
